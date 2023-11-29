@@ -220,6 +220,38 @@ LOCK TABLES `Orders` WRITE;
 INSERT INTO `Orders` VALUES (1,2,'2022-05-01',36,2,63,125,4,1),(2,2,'2022-05-02',2,1,118,235,5,1),(3,3,'2022-05-03',70,3,38,75,6,1),(4,3,'2022-05-04',8,3,110,220,7,1),(5,4,'2022-05-05',14,2,160,320,8,1),(6,4,'2022-05-06',71,1,105,210,9,1),(7,5,'2022-05-07',68,2,155,310,10,1),(8,5,'2022-05-08',36,3,113,225,11,1),(9,6,'2022-05-09',55,2,95,190,12,1),(10,6,'2022-05-10',68,1,49,98,13,1),(11,7,'2022-05-11',52,3,84,168,14,1),(12,7,'2022-05-12',11,3,51,102,15,1),(13,8,'2022-05-13',3,2,47,93,16,1),(14,8,'2022-05-14',7,1,22,45,17,1),(15,9,'2022-05-15',56,2,46,92,18,1),(16,9,'2022-05-16',58,3,67,133,19,1),(17,10,'2022-05-17',2,2,26,52,20,1),(18,10,'2022-05-18',26,1,42,84,21,1),(19,11,'2022-05-19',57,3,35,69,22,1),(20,11,'2022-05-20',20,3,60,120,23,1),(21,12,'2022-05-21',38,2,63,125,24,1),(22,12,'2022-05-22',7,1,118,235,25,1),(23,13,'2022-05-23',69,2,38,75,26,1),(24,13,'2022-05-24',18,3,110,220,27,1),(25,14,'2022-05-25',60,2,160,320,28,1),(26,14,'2022-05-26',34,1,105,210,29,1),(27,15,'2022-05-27',17,3,155,310,30,1),(28,15,'2022-05-28',33,3,113,225,31,1),(29,16,'2022-05-29',38,2,95,190,32,1),(30,16,'2022-05-30',42,1,49,98,33,1);
 /*!40000 ALTER TABLE `Orders` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `OrdersView`
+--
+
+DROP TABLE IF EXISTS `OrdersView`;
+/*!50001 DROP VIEW IF EXISTS `OrdersView`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `OrdersView` AS SELECT 
+ 1 AS `OrderID`,
+ 1 AS `Quantity`,
+ 1 AS `TotalCost`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Final view structure for view `OrdersView`
+--
+
+/*!50001 DROP VIEW IF EXISTS `OrdersView`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`admin_meta_capstone`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `OrdersView` AS select `Orders`.`OrderID` AS `OrderID`,`Orders`.`Quantity` AS `Quantity`,`Orders`.`TotalCost` AS `TotalCost` from `Orders` where (`Orders`.`Quantity` > 2) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -230,4 +262,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-27 19:33:41
+-- Dump completed on 2023-11-29 16:06:47
