@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `Bookings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Bookings` (
-  `BookingID` int NOT NULL,
+  `BookingID` int NOT NULL AUTO_INCREMENT,
   `BookingDate` date NOT NULL,
   `TableNo` int NOT NULL,
   `ArrivalSlot` varchar(45) NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `Bookings` (
   KEY `CustomerID_idx` (`Customer_ID`),
   CONSTRAINT `Customer_ID` FOREIGN KEY (`Customer_ID`) REFERENCES `Customers` (`CustomerID`),
   CONSTRAINT `Employee_ID` FOREIGN KEY (`Employee_ID`) REFERENCES `Employees` (`EmployeeID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `Bookings` (
 
 LOCK TABLES `Bookings` WRITE;
 /*!40000 ALTER TABLE `Bookings` DISABLE KEYS */;
-INSERT INTO `Bookings` VALUES (1,'2022-05-01',1,'Afternoon',4,6),(2,'2022-05-02',2,'Evening',5,6),(3,'2022-05-03',2,'Afternoon',6,6),(4,'2022-05-04',3,'Evening',7,6),(5,'2022-05-05',3,'Afternoon',8,6),(6,'2022-05-06',4,'Evening',9,6),(7,'2022-05-07',4,'Afternoon',10,6),(8,'2022-05-08',5,'Evening',11,6),(9,'2022-05-09',5,'Afternoon',12,6),(10,'2022-05-10',6,'Evening',13,6),(11,'2022-05-11',6,'Afternoon',14,6),(12,'2022-05-12',7,'Evening',15,6),(13,'2022-05-13',7,'Afternoon',16,6),(14,'2022-05-14',8,'Evening',17,6),(15,'2022-05-15',8,'Afternoon',18,6),(16,'2022-05-16',9,'Evening',19,6),(17,'2022-05-17',9,'Afternoon',20,6),(18,'2022-05-18',10,'Evening',21,6),(19,'2022-05-19',10,'Afternoon',22,6),(20,'2022-05-20',11,'Evening',23,6),(21,'2022-05-21',11,'Afternoon',24,6),(22,'2022-05-22',12,'Evening',25,6),(23,'2022-05-23',12,'Afternoon',26,6),(24,'2022-05-24',13,'Evening',27,6),(25,'2022-05-25',13,'Afternoon',28,6),(26,'2022-05-26',14,'Evening',29,6),(27,'2022-05-27',14,'Afternoon',30,6),(28,'2022-05-28',15,'Evening',31,6),(29,'2022-05-29',15,'Afternoon',32,6),(30,'2022-05-30',16,'Evening',33,6);
+INSERT INTO `Bookings` VALUES (1,'2022-05-01',1,'Afternoon',4,6),(2,'2022-05-02',2,'Evening',5,6),(3,'2022-05-03',2,'Afternoon',6,6),(4,'2022-05-04',3,'Evening',7,6),(5,'2022-05-05',3,'Afternoon',8,6),(6,'2022-05-06',4,'Evening',9,6),(7,'2022-05-07',4,'Afternoon',10,6),(8,'2022-05-08',5,'Evening',11,6),(9,'2022-05-09',5,'Afternoon',12,6),(10,'2022-05-10',6,'Evening',13,6),(11,'2022-05-11',6,'Afternoon',14,6),(12,'2022-05-12',7,'Evening',15,6),(13,'2022-05-13',7,'Afternoon',16,6),(14,'2022-05-14',8,'Evening',17,6),(15,'2022-05-15',8,'Afternoon',18,6),(16,'2022-05-16',9,'Evening',19,6),(17,'2022-05-17',9,'Afternoon',20,6),(18,'2022-05-18',10,'Evening',21,6),(19,'2022-05-19',10,'Afternoon',22,6),(20,'2022-05-20',11,'Evening',23,6),(21,'2022-05-21',11,'Afternoon',24,6),(22,'2022-05-22',12,'Evening',25,6),(23,'2022-05-23',12,'Afternoon',26,6),(24,'2022-05-24',13,'Evening',27,6),(25,'2022-05-25',13,'Afternoon',28,6),(26,'2022-05-26',14,'Evening',29,6),(27,'2022-05-27',14,'Afternoon',30,6),(28,'2022-05-28',15,'Evening',31,6),(29,'2022-05-29',15,'Afternoon',32,6),(30,'2022-05-30',16,'Evening',33,6),(59,'2022-10-10',5,'Evening',4,6),(60,'2022-11-12',3,'Evening',6,6),(61,'2022-10-11',2,'Evening',5,6),(62,'2022-10-13',2,'Evening',4,6),(70,'2022-10-13',5,'Evening',9,6),(81,'2022-10-13',5,'Afternoon',9,6);
 /*!40000 ALTER TABLE `Bookings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,4 +262,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-29 16:06:47
+-- Dump completed on 2023-12-01 20:01:38
